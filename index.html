@@ -12,21 +12,19 @@
 </section>
 <main class="sign-up">
 	<h1 class="title">Sign up</h1>
-	<section class="info">
-		<label class="search-label">Email</label>
-		<input type="text" name="Email" class="search-field" placeholder="foo@bar.com">
-		<label class="search-label">Password</label>
-		<input type="text" name="Password" placeholder="1234password" class="search-field">
-	</section>
-	<div class="button-container">
-		<button type="button" class="button">Sign up</button>
-	</div>
+	<form class="info" action="/signup/" method="post">
+		<label for="email" class="search-label">Email</label>
+		<input type="Email" name="Email" class="search-field" required placeholder="foo@bar.com" pattern="[a-z0-9]+@[a-z0-9].[a-z0-9]">
+		<label for="password" class="search-label">Password</label>
+		<input type="text" name="Password" required placeholder="1234password" class="search-field">
+		<button type="submit" class="button">Sign up</button>
+	</form>
 	<div class="recovery">
-		<a href="#">Forgot Password?</a>
+		<a href="/forgot-password/new">Forgot Password?</a>
 	</div>
 </main>
 <div class="log-in">
-	<p>Already have an account? <a href="#">Log In</a></p>
+	<p>Already have an account? <a href="/login">Log In</a></p>
 </div>
 </body>
 </html>
